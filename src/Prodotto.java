@@ -9,7 +9,7 @@ public class Prodotto{
     private double prezzo;
     private double iva;
 
-    // Constructor that generates random code
+    // Constructor to create a new product
     public Prodotto(String nome, String descrizione, double prezzo, double iva) {
         this.codice = generaCodice();
         this.nome = nome;
