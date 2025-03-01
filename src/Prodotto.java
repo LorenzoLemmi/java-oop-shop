@@ -1,7 +1,7 @@
 
 import java.util.Random;
 
-// Classe Prodotto che rappresenta un prodotto dello shop
+// Product Class representing a product from the shop
 public class Prodotto{
     private int codice;
     private String nome;
@@ -9,7 +9,7 @@ public class Prodotto{
     private double prezzo;
     private double iva;
 
-    // Costruttore che genera un codice random
+    // Constructor that generates random code
     public Prodotto(String nome, String descrizione, double prezzo, double iva) {
         this.codice = generaCodice();
         this.nome = nome;
@@ -18,29 +18,30 @@ public class Prodotto{
         this.iva = iva;
     }
 
-    // Metodo per generare un codice casuale
+    // Method to generate a random code
     private int generaCodice() {
         Random random = new Random();
-        return random.nextInt(10000); // Genera un numero casuale tra 0 e 9999
+        // Generate a random number between 0 and 9999
+        return random.nextInt(10000);
     }
 
-    // Metodo per ottenere il prezzo base
+    // Method to get the base price
     public double getPrezzoBase() {
         return this.prezzo;
     }
 
-    // Metodo per ottenere il prezzo comprensivo di IVA
+    // Method to obtain the price including VAT
     public double getPrezzoConIva() {
         return this.prezzo + (this.prezzo * this.iva / 100);
     }
 
-    // Metodo per ottenere il nome esteso del prodotto
+    // Method to get the full product name
     public String getNomeEsteso() {
         return this.codice + "-" + this.nome;
     }
 
-    // Metodo per visualizzare le informazioni del prodotto
-    public void stampaDettagli() {
+    // Method to view product information
+        public void stampaDettagli() {
         System.out.println("Codice: " + codice);
         System.out.println("Nome: " + nome);
         System.out.println("Descrizione: " + descrizione);
