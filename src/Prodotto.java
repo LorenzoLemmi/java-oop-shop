@@ -45,7 +45,7 @@ public class Prodotto{
         System.out.println("Codice: " + codice);
         System.out.println("Nome: " + nome);
         System.out.println("Descrizione: " + descrizione);
-        System.out.println("Prezzo base: " + prezzo + " euro");
+        System.out.println("Prezzo base: " + getPrezzoBase() + " euro");
         System.out.println("Prezzo con IVA: " + getPrezzoConIva() + " euro");
         System.out.println("Nome esteso: " + getNomeEsteso());
     }
