@@ -12,10 +12,26 @@ public class Prodotto{
     // Constructor to create a new product
     public Prodotto(String nome, String descrizione, double prezzo, double iva) {
         this.codice = generaCodice();
-        this.nome = nome;
+
+        if (nome != null) {
+            this.nome = nome;
+        } else {
+            System.out.println("Impossibile dare un nome null al prodotto");
+        }
+
         this.descrizione = descrizione;
-        this.prezzo = prezzo;
-        this.iva = iva;
+
+        if (prezzo > 0) {
+            this.prezzo = prezzo;
+        } else {
+            System.out.println("Impossibile impostare un prezzo minore o uguale a zero");
+        }
+
+        if (iva == 10 || iva == 22 || iva == 05) {
+            this.iva = iva;
+        } else {
+            System.out.println("Impossibile impostare l'iva a valori diversi");
+        }
     }
 
     // Method to generate a random code
